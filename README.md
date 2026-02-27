@@ -1,16 +1,28 @@
 ## Hi there 👋
 
-<!--
-**Chryfi/chryfi** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+## 🛠️ Tools & Experience
 
-Here are some ideas to get you started:
+### ⚡ Advanced
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+<table>
+  <tr>
+    <td align="center">
+      <img src="https://skillicons.dev/icons?i=java" width="48" height="48" alt="Java" /><br>
+      <b>Java</b><br>
+      <!-- JAVA_YEARS_START -->6.2<!-- JAVA_YEARS_END --> years
+    </td>
+    <td align="center">
+      <img src="https://skillicons.dev/icons?i=blender" width="48" height="48" alt="Blender" /><br>
+      <b>Blender</b><br>
+      <!-- BLENDER_YEARS_START -->4.2<!-- BLENDER_YEARS_END --> years
+    </td>
+  </tr>
+</table>
+
+### 👍 Good
+
+<img src="https://skillicons.dev/icons?i=python,html,css,js" />
+
+---
+
+<img src="https://skillicons.dev/icons?i=c,cpp,php" />
