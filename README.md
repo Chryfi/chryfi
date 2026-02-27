@@ -6,7 +6,6 @@ Hey, I am Christian, Software developer, VFX Artist, TD.
 
 <br>
 <img src="./icons/ARE_Logo_White.svg" width=200>
-<br>
 A small (~30 awesome people) hobby Minecraft Machinima studio, yes we do that in our free time!<br>
 Joined late 2021, now responsible for VFX creation and supervision, technical directing, software, RnD, pipeline tools/addons.
 <br><br>
@@ -35,13 +34,15 @@ Currently developing a standalone animation software at [Minechinima](https://gi
 </table>
 
 ### 👍 Good
+
+<p float="left">
 <img src="./icons/nukeX.svg" width="52" />
 <img src="./icons/substance_painter.png" width="48" />  
 <img src="https://skillicons.dev/icons?i=html,css,js,ts,bootstrap,php,git,github,idea" />
-
-<br>
+</p>
 
 ---
+<p float="left">
 <img src="./icons/houdini_badge_flat.svg" width="32">
 <img src="./icons/autodesk-maya-icon.png" width="32" />  
 <img src="./icons/embergen.png" width="32">
@@ -55,6 +56,7 @@ Currently developing a standalone animation software at [Minechinima](https://gi
 <img src="https://skillicons.dev/icons?i=lua" width="32" />
 <img src="https://skillicons.dev/icons?i=gradle" width="32" />
 <img src="https://skillicons.dev/icons?i=mysql" width="32" />
+</p>
 
 ## 📊 Statistics
 
