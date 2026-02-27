@@ -1,35 +1,39 @@
 ## Hi there 👋
+Hey, I am Christian, Software developer, VFX Artist, TD.
+
+B.Sc. Computer Science and Business
+Currently studying for B.Arts. VFX&Animation
 
 ## 🛠️ Tools & Experience
 
 ### ⚡ Advanced
 
-<table border="0">
+<table style="border-collapse: collapse; border: none;">
   <tr>
-    <td align="center">
+    <td align="center" style="border-collapse: collapse; border: none;">
       <img src="https://skillicons.dev/icons?i=java" width="48" height="48" alt="Java" /><br>
-      <b>Java</b><br>
       <!-- JAVA_YEARS_START -->6.2<!-- JAVA_YEARS_END --> years
     </td>
     <td align="center">
       <img src="https://skillicons.dev/icons?i=blender" width="48" height="48" alt="Blender" /><br>
-      <b>Blender</b><br>
       <!-- BLENDER_YEARS_START -->4.2<!-- BLENDER_YEARS_END --> years
+    </td>
+    <td align="center">
+      <img src="https://skillicons.dev/icons?i=python" width="48" height="48" alt="Python" /><br>
+      <!-- PYTHON_YEARS_START -->4.2<!-- PYTHON_YEARS_END --> years
     </td>
   </tr>
 </table>
 
 ### 👍 Good
-
-<img src="https://skillicons.dev/icons?i=python,html,css,js" />
+<img src="https://skillicons.dev/icons?i=html,css,js,ts,bootstrap,php,git,github,idea" />
 
 ---
+<img src="https://skillicons.dev/icons?i=aftereffects,premiere,photoshop," /><img src="https://skillicons.dev/icons?i=c,cpp,lua,gradle,mysql" />
 
-<img src="https://skillicons.dev/icons?i=c,cpp,php" />
+## 📊 Statistics
 
-# 📊 Statistics
-
-## 🌍 All Time
+### 🌍 All Time
 
 | Metric | Count |
 |--------|-------|
