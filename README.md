@@ -27,9 +27,9 @@
 
 <img src="https://skillicons.dev/icons?i=c,cpp,php" />
 
-## 📊 Statistics
+# 📊 Statistics
 
-### 🌍 All Time
+## 🌍 All Time
 
 | Metric | Count |
 |--------|-------|
