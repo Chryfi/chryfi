@@ -1,0 +1,53 @@
+name: Update README years
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Update years in README
+        run: |
+          python3 << 'EOF'
+          from datetime import date
+          import re
+
+          today = date.today()
+
+          start_dates = {
+              'JAVA': date(2020, 1, 1),
+              'BLENDER': date(2022, 1, 1),
+          }
+
+          with open('README.md', 'r') as f:
+              content = f.read()
+
+          for tool, start in start_dates.items():
+              years = (today - start).days / 365.25
+              years_str = f'{years:.1f}'
+              content = re.sub(
+                  rf'<!-- {tool}_YEARS_START -->.*?<!-- {tool}_YEARS_END -->',
+                  f'<!-- {tool}_YEARS_START -->{years_str}<!-- {tool}_YEARS_END -->',
+                  content
+              )
+
+          with open('README.md', 'w') as f:
+              f.write(content)
+          EOF
+
+      - name: Commit changes
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git add README.md
+          git diff --staged --quiet || git commit -m 'Update years in README'
+          git push
