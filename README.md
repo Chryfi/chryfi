@@ -33,16 +33,16 @@
 
 | Metric | Count |
 |--------|-------|
-| 💾 LOC Committed | <!-- TOTAL_LOC_START -->—<!-- TOTAL_LOC_END --> |
-| 🔀 PRs Opened | <!-- TOTAL_PRS_START -->—<!-- TOTAL_PRS_END --> |
-| 👀 Code Reviews | <!-- TOTAL_REVIEWS_START -->—<!-- TOTAL_REVIEWS_END --> |
-| ✅ Commits | <!-- TOTAL_COMMITS_START -->—<!-- TOTAL_COMMITS_END --> |
+| 💾 LOC Committed | <!-- TOTAL_LOC_START -->178,748<!-- TOTAL_LOC_END --> |
+| 🔀 PRs Opened | <!-- TOTAL_PRS_START -->76<!-- TOTAL_PRS_END --> |
+| 👀 Code Reviews | <!-- TOTAL_REVIEWS_START -->6<!-- TOTAL_REVIEWS_END --> |
+| ✅ Commits | <!-- TOTAL_COMMITS_START -->992<!-- TOTAL_COMMITS_END --> |
 
 ### 📅 <!-- CURRENT_YEAR_START -->2026<!-- CURRENT_YEAR_END -->
 
 | Metric | Count |
 |--------|-------|
-| 💾 LOC Committed | <!-- YEAR_LOC_START -->—<!-- YEAR_LOC_END --> |
-| 🔀 PRs Opened | <!-- YEAR_PRS_START -->—<!-- YEAR_PRS_END --> |
-| 👀 Code Reviews | <!-- YEAR_REVIEWS_START -->—<!-- YEAR_REVIEWS_END --> |
-| ✅ Commits | <!-- YEAR_COMMITS_START -->—<!-- YEAR_COMMITS_END --> |
+| 💾 LOC Committed | <!-- YEAR_LOC_START -->1,628<!-- YEAR_LOC_END --> |
+| 🔀 PRs Opened | <!-- YEAR_PRS_START -->0<!-- YEAR_PRS_END --> |
+| 👀 Code Reviews | <!-- YEAR_REVIEWS_START -->0<!-- YEAR_REVIEWS_END --> |
+| ✅ Commits | <!-- YEAR_COMMITS_START -->9<!-- YEAR_COMMITS_END --> |
