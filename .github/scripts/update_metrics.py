@@ -66,20 +66,20 @@ for year in range(START_YEAR, CURRENT_YEAR + 1):
 
 
 def get_repos():
-    """Return all non-fork repos owned by USERNAME."""
+    """Return all repos with any affiliation by USERNAME."""
     repos = []
     page = 1
     while True:
         r = requests.get(
             'https://api.github.com/user/repos',
-            params={'per_page': 100, 'page': page, 'affiliation': 'owner'},
+            params={'per_page': 100, 'page': page},
             headers=REST_HEADERS,
         )
         r.raise_for_status()
         batch = r.json()
         if not batch:
             break
-        repos.extend(repo for repo in batch if not repo.get('fork'))
+        repos.extend(repo for repo in batch)
         if len(batch) < 100:
             break
         page += 1

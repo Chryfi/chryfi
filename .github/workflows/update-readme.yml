@@ -26,6 +26,7 @@ jobs:
           start_dates = {
               'JAVA': date(2020, 1, 1),
               'BLENDER': date(2022, 1, 1),
+              'PYTHON': date(2021, 1, 1)
           }
 
           with open('README.md', 'r') as f:
