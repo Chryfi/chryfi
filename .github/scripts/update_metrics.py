@@ -124,7 +124,7 @@ def fetch_stats(owner, repo_name) -> dict:
                         stats["loc_added_current_year"] += w['a']
                         stats["loc_removed_current_year"] += w['d']
 
-                print(f"Found contributor {owner} in {repo_name}\n")
+                print(f"Found contributor {author} in {repo_name}\n")
                 return stats
             return stats
         elif r.status_code == 202:
@@ -180,13 +180,10 @@ for key, value in [
     ('YEAR_PRS',            fmt(year_prs)),
     ('YEAR_REVIEWS',        fmt(year_reviews)),
     ('YEAR_ADDED_LOC',      fmt(total_stats["loc_added_current_year"])),
-    ('YEAR_REMOVED_LOC',    fmt(total_stats["loc_removed_current_year"]))
+    ('YEAR_REMOVED_LOC',    fmt(total_stats["loc_removed_current_year"])),
     ('CURRENT_YEAR',  str(CURRENT_YEAR)),
 ]:
     content = update_marker(content, key, value)
 
 with open('README.md', 'w') as f:
     f.write(content)
-
-print(f'All-time: commits={total_commits}, PRs={total_prs}, reviews={total_reviews}, LOC={total_loc}')
-print(f'{CURRENT_YEAR}: commits={year_commits}, PRs={year_prs}, reviews={year_reviews}, LOC={year_loc}')
