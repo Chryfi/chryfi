@@ -6,8 +6,9 @@ import re
 import time
 import requests
 from datetime import datetime, timezone
+import json
 
-TOKEN = os.environ.get('GH_PAT') or os.environ.get('GITHUB_TOKEN')
+TOKEN = os.environ.get('GH_PAT')
 USERNAME = 'Chryfi'
 START_YEAR = 2018
 
@@ -65,66 +66,75 @@ for year in range(START_YEAR, CURRENT_YEAR + 1):
         year_prs = cc['totalPullRequestContributions']
 
 
-def get_repos():
+def fetch_repos() -> [dict]:
     """Return all repos with any affiliation by USERNAME."""
+    print("Start fetching all repositories")
     repos = []
     page = 1
     while True:
         r = requests.get(
             'https://api.github.com/user/repos',
-            params={'per_page': 100, 'page': page, 'affiliation': 'owner'},
+            params={'per_page': 100, 'page': page, 'affiliation': 'owner,collaborator,organization_member'},
             headers=REST_HEADERS,
         )
         r.raise_for_status()
         batch = r.json()
+        print(f"{page} 100 page REST Return: ")
+        print("".join(batch[i]["name"] + ", " for i in range(len(batch))))
         if not batch:
             break
-        repos.extend(repo for repo in batch if not repo.get('fork'))
+        repos.extend(repo for repo in batch)
         if len(batch) < 100:
             break
         page += 1
     return repos
 
 
-def get_loc(owner, repo_name):
+def fetch_stats(owner, repo_name) -> dict:
     """Return (all_time_net_loc, current_year_net_loc) for USERNAME in repo."""
     url = f'https://api.github.com/repos/{owner}/{repo_name}/stats/contributors'
     year_start_ts = int(datetime(CURRENT_YEAR, 1, 1, tzinfo=timezone.utc).timestamp())
     year_end_ts = int(datetime(CURRENT_YEAR + 1, 1, 1, tzinfo=timezone.utc).timestamp())
 
+    print(f"Fetching contributor stats in repo {repo_name} for owner {owner}")
+    stats = {
+        "loc_added_total": 0,
+        "loc_removed_total": 0,
+        "loc_added_current_year": 0,
+        "loc_removed_current_year": 0
+    }
     username_lower = USERNAME.lower()
+    # try 6 attempts with a safety delay if error happens
     for attempt in range(6):
         r = requests.get(url, headers=REST_HEADERS)
         if r.status_code == 200:
             contributors = r.json() or []
+            
             for c in contributors:
                 if not isinstance(c, dict):
                     continue
-                if c.get('author', {}).get('login', '').lower() != username_lower:
+                author = c.get('author', {})
+                if author is None or author.get('login', '').lower() != username_lower:
                     continue
                 weeks = c.get('weeks', [])
-                all_loc = sum(w['a'] - w['d'] for w in weeks)
-                year_loc = sum(
-                    w['a'] - w['d'] for w in weeks
-                    if year_start_ts <= w['w'] < year_end_ts
-                )
-                return all_loc, year_loc
-            return 0, 0
+                for w in weeks:
+                    stats["loc_added_total"] += w['a']
+                    stats["loc_removed_total"] += w['d']
+                    if year_start_ts <= w['w'] < year_end_ts:
+                        stats["loc_added_current_year"] += w['a']
+                        stats["loc_removed_current_year"] += w['d']
+
+                print(f"Found contributor {owner} in {repo_name}\n")
+                return stats
+            return stats
         elif r.status_code == 202:
-            time.sleep(5 * (attempt + 1))
+            delay = 5 * (attempt + 1)
+            print(f"Received 202 response, sleeping for {delay}s")
+            time.sleep(delay)
         else:
-            return 0, 0
-    return 0, 0
-
-
-repos = get_repos()
-total_loc = 0
-year_loc = 0
-for repo in repos:
-    repo_total, repo_year = get_loc(repo['owner']['login'], repo['name'])
-    total_loc += repo_total
-    year_loc += repo_year
-
+            print(f"Unexpected response code {r.status_code}")
+            return stats
+    return stats
 
 def fmt(n):
     return f'{n:,}'
@@ -138,18 +148,39 @@ def update_marker(text, key, value):
     )
 
 
+
+
+
+
+
+repos = fetch_repos()
+total_stats = {
+        "loc_added_total": 0,
+        "loc_removed_total": 0,
+        "loc_added_current_year": 0,
+        "loc_removed_current_year": 0
+    }
+for repo in repos:
+    if repo["name"] == "RHAIPowerBI":
+        continue
+    stats = fetch_stats(repo['owner']['login'], repo['name'])
+    for key in stats:
+        total_stats[key] += stats[key]
+
 with open('README.md') as f:
     content = f.read()
 
 for key, value in [
-    ('TOTAL_COMMITS', fmt(total_commits)),
-    ('TOTAL_PRS',     fmt(total_prs)),
-    ('TOTAL_REVIEWS', fmt(total_reviews)),
-    ('TOTAL_LOC',     fmt(total_loc)),
-    ('YEAR_COMMITS',  fmt(year_commits)),
-    ('YEAR_PRS',      fmt(year_prs)),
-    ('YEAR_REVIEWS',  fmt(year_reviews)),
-    ('YEAR_LOC',      fmt(year_loc)),
+    ('TOTAL_COMMITS',       fmt(total_commits)),
+    ('TOTAL_PRS',           fmt(total_prs)),
+    ('TOTAL_REVIEWS',       fmt(total_reviews)),
+    ('TOTAL_ADDED_LOC',     fmt(total_stats["loc_added_total"])),
+    ('TOTAL_REMOVED_LOC',   fmt(total_stats["loc_removed_total"])),
+    ('YEAR_COMMITS',        fmt(year_commits)),
+    ('YEAR_PRS',            fmt(year_prs)),
+    ('YEAR_REVIEWS',        fmt(year_reviews)),
+    ('YEAR_ADDED_LOC',      fmt(total_stats["loc_added_current_year"])),
+    ('YEAR_REMOVED_LOC',    fmt(total_stats["loc_removed_current_year"]))
     ('CURRENT_YEAR',  str(CURRENT_YEAR)),
 ]:
     content = update_marker(content, key, value)

@@ -37,25 +37,33 @@ Currently developing a standalone animation software at [Minechinima](https://gi
 
 <p float="left">
 <img src="./icons/nukeX.svg" width="52" />
-<img src="./icons/substance_painter.png" width="48" />  
-<img src="https://skillicons.dev/icons?i=html,css,js,ts,bootstrap,php,git,github,idea" />
+<img src="./icons/substance_painter.png" width="48" />
+<img src="https://skillicons.dev/icons?i=html" />
+<img src="https://skillicons.dev/icons?i=css" />
+<img src="https://skillicons.dev/icons?i=js" />
+<img src="https://skillicons.dev/icons?i=ts" />
+<img src="https://skillicons.dev/icons?i=bootstrap" />
+<img src="https://skillicons.dev/icons?i=php" />
+<img src="https://skillicons.dev/icons?i=git" />
+<img src="https://skillicons.dev/icons?i=github" />
+<img src="https://skillicons.dev/icons?i=idea" />
 </p>
 
 ---
 <p float="left">
-<img src="./icons/houdini_badge_flat.svg" width="32">
-<img src="./icons/autodesk-maya-icon.png" width="32" />  
-<img src="./icons/embergen.png" width="32">
-<img src="./icons/DaVinci_Resolve_Studio.png" width="32">
-<img src="https://skillicons.dev/icons?i=aftereffects" width="32"/>
-<img src="https://skillicons.dev/icons?i=premiere" width="32"/>
-<img src="https://skillicons.dev/icons?i=photoshop" width="32"/>
-<img src="https://skills.syvixor.com/api/icons?i=opengl" width="32" />
-<img src="https://skillicons.dev/icons?i=c" width="32" />
-<img src="https://skillicons.dev/icons?i=cpp" width="32" />
-<img src="https://skillicons.dev/icons?i=lua" width="32" />
-<img src="https://skillicons.dev/icons?i=gradle" width="32" />
-<img src="https://skillicons.dev/icons?i=mysql" width="32" />
+<img src="./icons/houdini_badge_flat.svg" width="24">
+<img src="./icons/autodesk-maya-icon.png" width="24" />  
+<img src="./icons/embergen.png" width="24">
+<img src="./icons/DaVinci_Resolve_Studio.png" width="24">
+<img src="https://skillicons.dev/icons?i=aftereffects" width="24"/>
+<img src="https://skillicons.dev/icons?i=premiere" width="24"/>
+<img src="https://skillicons.dev/icons?i=photoshop" width="24"/>
+<img src="https://skills.syvixor.com/api/icons?i=opengl" width="24" />
+<img src="https://skillicons.dev/icons?i=c" width="24" />
+<img src="https://skillicons.dev/icons?i=cpp" width="24" />
+<img src="https://skillicons.dev/icons?i=lua" width="24" />
+<img src="https://skillicons.dev/icons?i=gradle" width="24" />
+<img src="https://skillicons.dev/icons?i=mysql" width="24" />
 </p>
 
 ## 📊 Statistics
@@ -64,7 +72,8 @@ Currently developing a standalone animation software at [Minechinima](https://gi
 
 | Metric | Count |
 |--------|-------|
-| 💾 LOC Committed | <!-- TOTAL_LOC_START -->178,748<!-- TOTAL_LOC_END --> |
+| 💾 LOC Added | <!-- TOTAL_LOC_ADDED_START -->178,748<!-- TOTAL_LOC_ADDED_END --> |
+| 💾 LOC Removed | <!-- TOTAL_LOC_REMOVED_START -->178,748<!-- TOTAL_LOC_REMOVED_END --> |
 | 🔀 PRs Opened | <!-- TOTAL_PRS_START -->76<!-- TOTAL_PRS_END --> |
 | 👀 Code Reviews | <!-- TOTAL_REVIEWS_START -->6<!-- TOTAL_REVIEWS_END --> |
 | ✅ Commits | <!-- TOTAL_COMMITS_START -->992<!-- TOTAL_COMMITS_END --> |
@@ -73,7 +82,8 @@ Currently developing a standalone animation software at [Minechinima](https://gi
 
 | Metric | Count |
 |--------|-------|
-| 💾 LOC Committed | <!-- YEAR_LOC_START -->1,628<!-- YEAR_LOC_END --> |
+| 💾 LOC Added | <!-- YEAR_ADDED_LOC_START -->1,628<!-- YEAR_ADDED_LOC_END --> |
+| 💾 LOC Removed | <!-- YEAR_REMOVED_LOC_START -->1,628<!-- YEAR_REMOVED_LOC_END --> |
 | 🔀 PRs Opened | <!-- YEAR_PRS_START -->0<!-- YEAR_PRS_END --> |
 | 👀 Code Reviews | <!-- YEAR_REVIEWS_START -->0<!-- YEAR_REVIEWS_END --> |
 | ✅ Commits | <!-- YEAR_COMMITS_START -->9<!-- YEAR_COMMITS_END --> |
