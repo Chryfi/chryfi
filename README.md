@@ -72,18 +72,18 @@ Currently developing a standalone animation software at [Minechinima](https://gi
 
 | Metric | Count |
 |--------|-------|
-| 💾 LOC Added | <!-- TOTAL_ADDED_LOC_START -->178,748<!-- TOTAL_ADDED_LOC_END --> |
-| 💾 LOC Removed | <!-- TOTAL_REMOVED_LOC_START -->178,748<!-- TOTAL_REMOVED_LOC_END --> |
+| 💾 LOC Added | <!-- TOTAL_ADDED_LOC_START -->204,637<!-- TOTAL_ADDED_LOC_END --> |
+| 💾 LOC Removed | <!-- TOTAL_REMOVED_LOC_START -->75,262<!-- TOTAL_REMOVED_LOC_END --> |
 | 🔀 PRs Opened | <!-- TOTAL_PRS_START -->76<!-- TOTAL_PRS_END --> |
 | 👀 Code Reviews | <!-- TOTAL_REVIEWS_START -->6<!-- TOTAL_REVIEWS_END --> |
-| ✅ Commits | <!-- TOTAL_COMMITS_START -->1,000<!-- TOTAL_COMMITS_END --> |
+| ✅ Commits | <!-- TOTAL_COMMITS_START -->1,002<!-- TOTAL_COMMITS_END --> |
 
 ### 📅 <!-- CURRENT_YEAR_START -->2026<!-- CURRENT_YEAR_END -->
 
 | Metric | Count |
 |--------|-------|
-| 💾 LOC Added | <!-- YEAR_ADDED_LOC_START -->4,630<!-- YEAR_ADDED_LOC_END --> |
-| 💾 LOC Removed | <!-- YEAR_REMOVED_LOC_START -->924<!-- YEAR_REMOVED_LOC_END --> |
+| 💾 LOC Added | <!-- YEAR_ADDED_LOC_START -->4,632<!-- YEAR_ADDED_LOC_END --> |
+| 💾 LOC Removed | <!-- YEAR_REMOVED_LOC_START -->926<!-- YEAR_REMOVED_LOC_END --> |
 | 🔀 PRs Opened | <!-- YEAR_PRS_START -->0<!-- YEAR_PRS_END --> |
 | 👀 Code Reviews | <!-- YEAR_REVIEWS_START -->0<!-- YEAR_REVIEWS_END --> |
-| ✅ Commits | <!-- YEAR_COMMITS_START -->17<!-- YEAR_COMMITS_END --> |
+| ✅ Commits | <!-- YEAR_COMMITS_START -->19<!-- YEAR_COMMITS_END --> |
