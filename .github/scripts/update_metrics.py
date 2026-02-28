@@ -79,7 +79,7 @@ def get_repos():
         batch = r.json()
         if not batch:
             break
-        repos.extend(repo for repo in batch)
+        repos.extend(repo for repo in batch if not repo.get('fork'))
         if len(batch) < 100:
             break
         page += 1
