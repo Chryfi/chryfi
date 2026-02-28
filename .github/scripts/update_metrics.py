@@ -72,7 +72,7 @@ def get_repos():
     while True:
         r = requests.get(
             'https://api.github.com/user/repos',
-            params={'per_page': 100, 'page': page, 'affiliation': 'owner,collaborator,organization_member'},
+            params={'per_page': 100, 'page': page, 'affiliation': 'owner'},
             headers=REST_HEADERS,
         )
         r.raise_for_status()
