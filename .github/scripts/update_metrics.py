@@ -104,8 +104,8 @@ def fetch_stats(owner, repo_name) -> dict:
         "loc_removed_current_year": 0
     }
     username_lower = USERNAME.lower()
-    # try 6 attempts with a safety delay if error happens
-    for attempt in range(6):
+    # try 8 attempts with a safety delay if error happens
+    for attempt in range(8):
         r = requests.get(url, headers=REST_HEADERS)
         if r.status_code == 200:
             contributors = r.json() or []
@@ -124,7 +124,7 @@ def fetch_stats(owner, repo_name) -> dict:
                         stats["loc_added_current_year"] += w['a']
                         stats["loc_removed_current_year"] += w['d']
 
-                print(f"Found contributor {author} in {repo_name}\n")
+                print(f"Found contributor {author["login"]} in {repo_name}\n")
                 return stats
             return stats
         elif r.status_code == 202:
@@ -134,6 +134,7 @@ def fetch_stats(owner, repo_name) -> dict:
         else:
             print(f"Unexpected response code {r.status_code}")
             return stats
+    print("Timed out")
     return stats
 
 def fmt(n):
@@ -166,6 +167,8 @@ for repo in repos:
     stats = fetch_stats(repo['owner']['login'], repo['name'])
     for key in stats:
         total_stats[key] += stats[key]
+    # maybe safety delay here helps too many time outs
+    time.sleep(1)
 
 with open('README.md') as f:
     content = f.read()
