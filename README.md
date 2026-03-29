@@ -72,8 +72,8 @@ Currently developing a standalone animation software at [Minechinima](https://gi
 
 | Metric | Count |
 |--------|-------|
-| 💾 LOC Added | <!-- TOTAL_ADDED_LOC_START -->203,149<!-- TOTAL_ADDED_LOC_END --> |
-| 💾 LOC Removed | <!-- TOTAL_REMOVED_LOC_START -->74,525<!-- TOTAL_REMOVED_LOC_END --> |
+| 💾 LOC Added | <!-- TOTAL_ADDED_LOC_START -->206,745<!-- TOTAL_ADDED_LOC_END --> |
+| 💾 LOC Removed | <!-- TOTAL_REMOVED_LOC_START -->75,859<!-- TOTAL_REMOVED_LOC_END --> |
 | 🔀 PRs Opened | <!-- TOTAL_PRS_START -->76<!-- TOTAL_PRS_END --> |
 | 👀 Code Reviews | <!-- TOTAL_REVIEWS_START -->6<!-- TOTAL_REVIEWS_END --> |
 | ✅ Commits | <!-- TOTAL_COMMITS_START -->1,008<!-- TOTAL_COMMITS_END --> |
