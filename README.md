@@ -24,7 +24,7 @@ Currently developing a standalone animation software at [Minechinima](https://gi
     </td>
     <td align="center">
       <img src="https://skillicons.dev/icons?i=python" width="48" height="48" alt="Python" /><br>
-      <!-- PYTHON_YEARS_START -->5.3<!-- PYTHON_YEARS_END --> years
+      <!-- PYTHON_YEARS_START -->5.4<!-- PYTHON_YEARS_END --> years
     </td>
     <td align="center">
       <img src="https://skillicons.dev/icons?i=blender" width="48" height="48" alt="Blender" /><br>
