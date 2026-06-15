@@ -24,11 +24,11 @@ Currently developing a standalone animation software at [Minechinima](https://gi
     </td>
     <td align="center">
       <img src="https://skillicons.dev/icons?i=python" width="48" height="48" alt="Python" /><br>
-      <!-- PYTHON_YEARS_START -->5.4<!-- PYTHON_YEARS_END --> years
+      <!-- PYTHON_YEARS_START -->5.5<!-- PYTHON_YEARS_END --> years
     </td>
     <td align="center">
       <img src="https://skillicons.dev/icons?i=blender" width="48" height="48" alt="Blender" /><br>
-      <!-- BLENDER_YEARS_START -->4.4<!-- BLENDER_YEARS_END --> years
+      <!-- BLENDER_YEARS_START -->4.5<!-- BLENDER_YEARS_END --> years
     </td>
   </tr>
 </table>
