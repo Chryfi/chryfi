@@ -20,7 +20,7 @@ Currently developing a standalone animation software at [Minechinima](https://gi
   <tr>
     <td align="center" style="border-collapse: collapse; border: none;">
       <img src="https://skillicons.dev/icons?i=java" width="48" height="48" alt="Java" /><br>
-      <!-- JAVA_YEARS_START -->6.5<!-- JAVA_YEARS_END --> years
+      <!-- JAVA_YEARS_START -->6.6<!-- JAVA_YEARS_END --> years
     </td>
     <td align="center">
       <img src="https://skillicons.dev/icons?i=python" width="48" height="48" alt="Python" /><br>
@@ -28,7 +28,7 @@ Currently developing a standalone animation software at [Minechinima](https://gi
     </td>
     <td align="center">
       <img src="https://skillicons.dev/icons?i=blender" width="48" height="48" alt="Blender" /><br>
-      <!-- BLENDER_YEARS_START -->4.5<!-- BLENDER_YEARS_END --> years
+      <!-- BLENDER_YEARS_START -->4.6<!-- BLENDER_YEARS_END --> years
     </td>
   </tr>
 </table>
