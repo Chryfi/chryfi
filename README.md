@@ -36,7 +36,7 @@ Currently developing a standalone animation software at [Minechinima](https://gi
 ### 👍 Good
 
 <p float="left">
-<img src="./icons/houdini_badge_flat.svg" width="24">
+<img src="./icons/houdini_badge_flat.svg" width="48">
 <img src="./icons/nukeX.svg" width="52" />
 <img src="./icons/substance_painter.png" width="48" />
 <img src="https://skillicons.dev/icons?i=html" />
